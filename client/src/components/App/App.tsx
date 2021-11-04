@@ -41,8 +41,8 @@ const App: FC<unknown> = () => {
     return <div></div>;
   }
   return (
-    <Router>
-      <ThemeProvider>
+    <ThemeProvider>
+      <Router>
         <Header />
         <Container maxWidth="lg">
           <Switch>
@@ -58,8 +58,8 @@ const App: FC<unknown> = () => {
             </Route>
           </Switch>
         </Container>
-      </ThemeProvider>
-    </Router>
+      </Router>
+    </ThemeProvider>
   );
 };
 
