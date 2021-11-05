@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import useStyles from './styles';
 import { TestGroup, RunnableType, TestSuite } from 'models/testSuiteModels';
-import { Card, List } from '@material-ui/core';
+import {Card, Chip, List} from '@material-ui/core';
 import ResultIcon from './ResultIcon';
 import TestRunButton from '../TestRunButton/TestRunButton';
 
@@ -25,7 +25,9 @@ const TestGroupCard: FC<TestGroupCardProps> = ({
         <span className={styles.testGroupCardHeaderResult}>
           <ResultIcon result={runnable.result} />
         </span>
-        <span className={styles.testGroupCardHeaderText}>{runnable.title}</span>
+        <span className={styles.testGroupCardHeaderText}>
+          {runnable.title} {runnable.optional && <Chip label="Optional" size="small" />}
+        </span>
         <TestRunButton
           runnable={runnable}
           runTests={runTests}

@@ -95,7 +95,13 @@ const TestListItem: FC<TestListItemProps> = ({
       <Box className={styles.listItem}>
         <ListItem>
           <div className={styles.testIcon}>{<ResultIcon result={test.result} />}</div>
-          <ListItemText primary={test.title} />
+          <ListItemText
+            primary={
+              <span>
+                {test.title} {test.optional && <Chip label="Optional" size="small" />}{' '}
+              </span>
+            }
+          />
           {messagesBadge}
           {requestsBadge}
           {expandButton}
