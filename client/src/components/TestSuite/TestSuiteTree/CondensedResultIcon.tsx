@@ -55,7 +55,11 @@ const CondensedResultIcon: FC<CondensedResultIconProps> = ({ result }) => {
         return (
           <Tooltip title="error">
             <FiberManualRecordIcon
-              style={{ color: result.optional ? red[100] : red[500], width: '0.5em', height: '0.5em' }}
+              style={{
+                color: result.optional ? red[100] : red[500],
+                width: '0.5em',
+                height: '0.5em',
+              }}
               data-testid={`${result.id}-${result.result}`}
             />
           </Tooltip>

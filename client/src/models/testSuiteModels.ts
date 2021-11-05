@@ -76,6 +76,7 @@ export interface TestGroup {
   description?: string;
   run_as_group?: boolean;
   user_runnable?: boolean;
+  optional: boolean;
 }
 
 export interface TestSuite {
@@ -84,6 +85,7 @@ export interface TestSuite {
   result?: Result;
   test_groups?: TestGroup[];
   description?: string;
+  optional: boolean;
 }
 
 export interface TestSession {

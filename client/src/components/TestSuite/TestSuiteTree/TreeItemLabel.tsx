@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import { RunnableType, TestGroup, TestSuite } from 'models/testSuiteModels';
-import { Typography } from '@material-ui/core';
+import { Chip, Typography } from '@material-ui/core';
 import useStyles from './styles';
 import CondensedResultIcon from './CondensedResultIcon';
 import TestRunButton from '../TestRunButton/TestRunButton';
@@ -16,7 +16,7 @@ const TreeItemLabel: FC<TreeItemLabelProps> = ({ runnable, runTests, testRunInPr
   return (
     <div className={styles.labelRoot} data-testid={`tiLabel-${runnable.id}`}>
       <Typography className={styles.labelText} variant="body2">
-        {runnable.title}
+        {runnable.title} {runnable.optional && <Chip label="Optional" size="small" />}
       </Typography>
       <CondensedResultIcon result={runnable.result} />
       <TestRunButton
