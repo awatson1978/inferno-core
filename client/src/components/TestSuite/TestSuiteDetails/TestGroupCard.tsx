@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import useStyles from './styles';
 import { TestGroup, RunnableType, TestSuite } from 'models/testSuiteModels';
-import {Card, Chip, List} from '@material-ui/core';
+import { Card, Chip, List } from '@material-ui/core';
 import ResultIcon from './ResultIcon';
 import TestRunButton from '../TestRunButton/TestRunButton';
 
