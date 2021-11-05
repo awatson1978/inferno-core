@@ -19,7 +19,7 @@ const ResultIcon: FC<ResultIconProps> = ({ result }) => {
         return (
           <Tooltip title="passed">
             <CheckCircleIcon
-              style={{ color: green[500] }}
+              style={{ color: result.optional ? green[100] : green[500] }}
               data-testid={`${result.id}-${result.result}`}
             />
           </Tooltip>
@@ -27,7 +27,10 @@ const ResultIcon: FC<ResultIconProps> = ({ result }) => {
       case 'fail':
         return (
           <Tooltip title="failed">
-            <CancelIcon style={{ color: red[500] }} data-testid={`${result.id}-${result.result}`} />
+            <CancelIcon
+              style={{ color: result.optional ? red[100] : red[500] }}
+              data-testid={`${result.id}-${result.result}`}
+            />
           </Tooltip>
         );
       case 'skip':
@@ -45,7 +48,10 @@ const ResultIcon: FC<ResultIconProps> = ({ result }) => {
       case 'error':
         return (
           <Tooltip title="error">
-            <ErrorIcon style={{ color: red[500] }} data-testid={`${result.id}-${result.result}`} />
+            <ErrorIcon
+              style={{ color: result.optional ? red[100] : red[500] }}
+              data-testid={`${result.id}-${result.result}`}
+            />
           </Tooltip>
         );
       case 'wait':
