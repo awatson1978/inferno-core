@@ -1,4 +1,6 @@
-import { makeStyles, Theme } from '@material-ui/core/styles';
+import { Theme } from '@mui/material/styles';
+
+import makeStyles from '@mui/styles/makeStyles';
 
 export default makeStyles((theme: Theme) => ({
   container: {
@@ -12,7 +14,7 @@ export default makeStyles((theme: Theme) => ({
     marginTop: '125px',
   },
   selectedItem: {
-    backgroundColor: 'rgba(248, 139, 48, 0.12) !important',
+    backgroundColor: 'rgba(248, 139, 48, 0.42) !important',
   },
   getStarted: {
     marginTop: '100px',

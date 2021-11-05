@@ -1,4 +1,6 @@
-import { makeStyles, Theme } from '@material-ui/core/styles';
+import { Theme } from '@mui/material/styles';
+
+import makeStyles from '@mui/styles/makeStyles';
 
 export default makeStyles((theme: Theme) => ({
   labelRoot: {
@@ -21,6 +23,9 @@ export default makeStyles((theme: Theme) => ({
     width: '10px',
     height: '10px',
     marginRight: '5px',
+  },
+  selectedItem: {
+    backgroundColor: 'rgba(248, 139, 48, 0.42) !important',
   },
   testSuiteTreePanel: {
     height: 'fit-content',

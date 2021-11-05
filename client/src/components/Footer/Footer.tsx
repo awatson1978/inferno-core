@@ -1,6 +1,6 @@
 import React, { FC } from 'react';
 import useStyles from './styles';
-import { Link } from '@material-ui/core';
+import { Link } from '@mui/material';
 
 interface FooterProps {
   githubLink?: string;

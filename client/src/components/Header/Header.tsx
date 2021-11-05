@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
 import useStyles from './styles';
 import logo from 'images/inferno_logo.png';
-import { Box, Button, Container } from '@material-ui/core';
+import { Box, Button, Container } from '@mui/material';
 import { useHistory } from 'react-router-dom';
 
 const Header: FC<unknown> = () => {

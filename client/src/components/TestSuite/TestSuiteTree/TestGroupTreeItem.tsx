@@ -1,7 +1,8 @@
 import React, { FC, MouseEvent } from 'react';
 import { TestGroup, RunnableType } from 'models/testSuiteModels';
-import TreeItem from '@material-ui/lab/TreeItem';
+import TreeItem from '@mui/lab/TreeItem';
 import TreeItemLabel from './TreeItemLabel';
+import useStyles from './styles';
 
 export interface TestGroupTreeItemProps {
   testGroup: TestGroup;
@@ -16,6 +17,8 @@ const TestGroupTreeItem: FC<TestGroupTreeItemProps> = ({
   onLabelClick,
   testRunInProgress,
 }) => {
+  const styles = useStyles();
+
   let sublist: JSX.Element[] = [];
   if (testGroup.test_groups.length > 0) {
     sublist = testGroup.test_groups.map((subTestGroup, index) => (
@@ -28,6 +31,7 @@ const TestGroupTreeItem: FC<TestGroupTreeItemProps> = ({
       ></TestGroupTreeItem>
     ));
   }
+
   return (
     <TreeItem
       nodeId={testGroup.id}
@@ -38,7 +42,8 @@ const TestGroupTreeItem: FC<TestGroupTreeItemProps> = ({
           testRunInProgress={testRunInProgress}
         />
       }
-      onLabelClick={(event) => onLabelClick(event, testGroup.id)}
+      onClick={(event) => onLabelClick(event, testGroup.id)}
+      classes={{ selected: styles.selectedItem }}
     >
       {sublist}
     </TreeItem>

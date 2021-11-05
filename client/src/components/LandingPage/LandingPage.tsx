@@ -1,13 +1,5 @@
 import React, { FC } from 'react';
-import {
-  Typography,
-  Container,
-  Button,
-  Paper,
-  List,
-  ListItem,
-  ListItemText,
-} from '@material-ui/core';
+import { Typography, Container, Button, Paper, List, ListItem, ListItemText } from '@mui/material';
 import { TestSuite, TestSession } from 'models/testSuiteModels';
 import useStyles from './styles';
 import { useHistory } from 'react-router-dom';

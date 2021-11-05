@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import useStyles from './styles';
-import { Link, ListItem, ListItemIcon, ListItemText } from '@material-ui/core';
+import { Link, ListItem, ListItemIcon, ListItemText } from '@mui/material';
 import { RunnableType, TestGroup } from 'models/testSuiteModels';
-import FolderIcon from '@material-ui/icons/Folder';
+import FolderIcon from '@mui/icons-material/Folder';
 import ResultIcon from './ResultIcon';
 import TestRunButton from '../TestRunButton/TestRunButton';
 
